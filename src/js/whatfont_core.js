@@ -787,7 +787,7 @@ function _whatFont() {
 
         init: function() {
             var exit = $.wfElem('div', "exit", "Exit WhatFont"),
-                help = $.wfElem('div', "help", "<strong>Hover</strong> to identify<br /><strong>Click</strong> to pin a detail panel");
+                help = $.wfElem('div', "help", "<strong>Hover</strong> to identify<br><strong>Click</strong> to pin a detail panel");
 
             toolbar.TOOLBAR = $("<div>").addClass(css.getClassName(["elem", "control"])).append(exit).appendTo('body');
 

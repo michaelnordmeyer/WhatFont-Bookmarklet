@@ -22,18 +22,14 @@
 
 .__whatfont_basic {
   background: transparent;
-  border: 0px solid black;
-  border-bottom: 0px solid black;
-  border-left: 0px solid black;
-  border-right: 0px solid black;
-  border-top: 0px solid black;
-  border-radius: none;
-  -moz-border-radius: none;
-  -webkit-border-radius: none;
+  border: 0 solid black;
+  border-bottom: 0 solid black;
+  border-left: 0 solid black;
+  border-right: 0 solid black;
+  border-top: 0 solid black;
+  border-radius: 0;
   bottom: auto;
   box-shadow: none;
-  -moz-border-radius: none;
-  -webkit-box-shadow: none;
   clear: none;
 	color: inherit;
 	cursor: auto;

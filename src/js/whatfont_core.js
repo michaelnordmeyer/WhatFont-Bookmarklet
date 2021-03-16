@@ -9,7 +9,7 @@ function _whatFont() {
         SCREENSHOT_WIDTH = 480,
         SCREENSHOT_HEIGHT = 320,
 
-        $, h2c, apiURL, css, toolbar, panel, ctrl, fs, _wf, TestCanvas, TypeInfo, Tip, tip, defaultFont, typeInfoCache = [];
+        $, h2c, css, toolbar, panel, ctrl, fs, _wf, TestCanvas, TypeInfo, Tip, tip, defaultFont, typeInfoCache = [];
 
 
     // Test Canvas
@@ -207,25 +207,6 @@ function _whatFont() {
             }
 
             return stack[0]; // Can't detected, guess
-        },
-
-        saveDesignToServer: function(cb) {
-            var that = this;
-
-            $.getJSON(apiURL + '/designs/create?callback=?', {
-                font: this.current,
-                style: this.style,
-                weight: this.weight,
-                image_base64: this.screenshot,
-                url: document.location.toString()
-            }, function(data) {
-                if (data.url) {
-                    that.designURL = data.url;
-                }
-                if (cb) {
-                    cb();
-                }
-            });
         }
     };
 
@@ -1087,9 +1068,6 @@ function _whatFont() {
         setScreenshot: function(options) {
             screenshot = $.extend(screenshot, options);
         },
-        setAPIURL: function(url) {
-            apiURL = url;
-        },
         setCSSURL: function(url) {
             css.CSS_URL = url;
         },
@@ -1121,4 +1099,3 @@ function _whatFont() {
 
     return _wf;
 }
-

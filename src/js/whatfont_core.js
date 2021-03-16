@@ -236,7 +236,7 @@ function _whatFont() {
     css = {
         STYLE_PRE: '__whatfont_',
 
-        CSS_URL: "https://chengyinliu.com/wf.css?ver=" + VER,
+        CSS_URL: "https://www.chengyinliu.com/wf.css?ver=" + VER,
 
         init: function() {
             //Insert the stylesheet

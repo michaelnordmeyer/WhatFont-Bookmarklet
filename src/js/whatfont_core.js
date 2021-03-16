@@ -314,7 +314,7 @@ function _whatFont() {
 
                             fs.fontData[family.slug].services.Typekit = {
                                 id: family.id,
-                                url: 'http://typekit.com/fonts/' + family.slug
+                                url: 'https://typekit.com/fonts/' + family.slug
                             };
                         });
                     }
@@ -341,7 +341,7 @@ function _whatFont() {
                         };
 
                         fs.fontData[slug].services.Google = {
-                            url: 'http://www.google.com/webfonts/family?family=' + str
+                            url: 'https://www.google.com/webfonts/family?family=' + str
                         };
                     });
                 }
@@ -376,13 +376,13 @@ function _whatFont() {
             });
 
             $.each(projectIds, function(i, projectId) {
-                $.getJSON("http://fontdeck.com/api/v1/project-info?project=" + projectId + "&domain=" + domain + "&callback=?", function(data) {
+                $.getJSON("https://fontdeck.com/api/v1/project-info?project=" + projectId + "&domain=" + domain + "&callback=?", function(data) {
                     if (typeof data !== 'undefined' && typeof data.provides !== 'undefined') {
                         $.each(data.provides, function(i, font) {
                             var fontName = font.name,
                                 slug = fontName.replace(/ /g, '-').toLowerCase(),
                                 searchTerm = fontName.split(' ')[0],
-                                fontURL = font.url || 'http://fontdeck.com/search?q=' + searchTerm;
+                                fontURL = font.url || 'https://fontdeck.com/search?q=' + searchTerm;
 
                             fs.getSlugWithCSSName[fontName] = slug;
                             fs.fontData[slug] = fs.fontData[slug] || {
